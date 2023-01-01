@@ -1,0 +1,16 @@
+<h1>Add another present</h1>
+
+{{!-- <form method="POST" action="/presents/new"> --}}
+<form method="POST" action="/another">
+    <label>Present name</label>
+    <input required type="text" name="name" placeholder="Isomething"/>
+    <label>Present image</label>
+    <input required type="text" name="image" placeholder="http...image.jpg"/>
+    <label>Present price</label>
+    <input required type="number" name="price" placeholder="€€€"/>
+    <label>Recipient name</label>
+    <input required type="text" name="recipient" placeholder="Santa's friend"/>
+    <label>Present details</label>
+    <textarea required name="description"></textarea>
+    <button type="submit">Send</button>
+</form>

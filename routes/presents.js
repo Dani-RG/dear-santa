@@ -7,7 +7,7 @@ const Present = require('../models/Present');
 router.get('/', async function (req, res, next) {
     try {
         const presents = await Present.find({});
-        res.render('presentsView', { presents });
+        res.render('presentView', { presents });
     }
     catch (error) {
         next(error)
@@ -26,5 +26,26 @@ router.get('/:presentId', async function (req, res, next) {
         next(error)
     }
 });
+
+// GET new present form view
+// ROUTE /presents/new
+router.get('/new', function (req, res, next) {
+    res.render('newPresent');
+  });
+
+// POST new present created view
+// ROUTE /presents/new
+/*
+router.post('/new', async function (req, res, next) {
+    const { name,image,price,recipient,description } = req.body;
+    try {
+        const createdPresent = await Present.create({ name, image, price, recipient, description });
+        res.redirect(`/presents/${createdPresent._id}`);
+    }
+    catch (error) {
+        next(error)
+    }
+});
+*/
 
 module.exports = router;
