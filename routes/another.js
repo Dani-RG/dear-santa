@@ -1,3 +1,4 @@
+/*
 const express = require('express');
 const router = express.Router();
 const Present = require('../models/Present');
@@ -8,6 +9,8 @@ router.get('/', function (req, res, next) {
     res.render('another');
 });
 
+// POST another present created view
+// ROUTE /another
 router.post('/', async function (req, res, next) {
     const { name,image,price,recipient,description } = req.body;
     try {
@@ -21,3 +24,4 @@ router.post('/', async function (req, res, next) {
 });
 
 module.exports = router;
+*/
