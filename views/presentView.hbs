@@ -1,5 +1,9 @@
-<h3>Presents</h3>
-
-{{#each presents}}
-    {{>presentCard this}}
-{{/each}}
+<body id="presents-page">
+    <section class="container">
+            {{#each presents}}
+                <div class="card">
+                {{>presentCard this}}
+                </div>
+            {{/each}}
+    </section>
+</body>

@@ -14,7 +14,7 @@ router.get('/', async function (req, res, next) {
     }
 });
 
-// GET new present form view TODO EL PROBLEMA QUE TUVE DE Error "Cast to ObjectId failed" SE ARREGLA REORDENANDO (SUBIENDO) ESTA RUTA.
+// GET new present form view
 // ROUTE /presents/new
 router.get('/new', function (req, res, next) {
     res.render('new');
@@ -26,7 +26,6 @@ router.post('/new', async function (req, res, next) {
     const { name,image,price,recipient,description } = req.body;
     try {
         const createdPresent = await Present.create({ name, image, price, recipient, description });
-        //res.redirect(`/presents/${createdPresent._id}`);
         res.redirect('/presents');
     }
     catch (error) {
